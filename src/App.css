@@ -1,0 +1,428 @@
+ @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+ *{
+  font-family: "Merienda", serif;
+ }
+ 
+ /* Auth Component CSS */
+ .auth {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 18vh;
+   /* Full-screen height */
+   /* background-color: #f7f8fa; */
+   /* Light background */
+   font-family: 'Arial', sans-serif;
+   /* Font style */
+ }
+
+ .auth p {
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: #333;
+   /* Dark text color */
+   margin-bottom: 1rem;
+   /* Spacing below the text */
+ }
+
+ .auth button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #fff;
+   /* White background */
+   border: 2px solid #ddd;
+   /* Light border */
+   border-radius: 8px;
+   /* Rounded corners */
+   padding: 0.5rem 1rem;
+   /* Button padding */
+   font-size: 1rem;
+   color: #333;
+   /* Text color */
+   cursor: pointer;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   /* Subtle shadow */
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+ }
+
+ .auth button:hover {
+   transform: scale(1.05);
+   /* Slightly enlarge on hover */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   /* Stronger shadow on hover */
+ }
+
+ .auth button svg {
+   margin-right: 0.5rem;
+   /* Space between icon and text */
+   font-size: 1.5rem;
+   /* Adjust icon size */
+ }
+
+ /* Chat Component CSS */
+ .chat-app {
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   /* Full-screen height */
+   width: 80rem;
+   /* Centered narrow chat app */
+   margin: 0 auto;
+   /* Center horizontally */
+   border: 1px solid #ddd;
+   /* Subtle border */
+   border-radius: 8px;
+   /* Rounded corners */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   /* Shadow for depth */
+   background-color: #f9f9f9;
+   /* Light background */
+   font-family: 'Arial', sans-serif;
+ }
+
+ /* Header Section */
+ .header {
+   background-color: #082d5c;
+   /* Green header */
+   color: #fff;
+   /* White text */
+   text-align: center;
+   padding: 1rem;
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+ }
+
+ .header h1 {
+   margin: 0;
+   font-size: 1.5rem;
+ }
+
+ /* Messages Section */
+ .messages {
+   flex: 1;
+   /* Take up available vertical space */
+   overflow-y: auto;
+   /* Scrollable for long messages */
+   padding: 1rem;
+   background-color: #fff;
+   /* White background for messages */
+ }
+
+ .message {
+   margin-bottom: 0.8rem;
+   /* Spacing between messages */
+   padding: 0.5rem;
+   border-radius: 4px;
+   /* Rounded corners */
+   background-color: #f1f1f1;
+   /* Light gray background for messages */
+ }
+
+ .message .user {
+   font-weight: bold;
+   color: #333;
+   /* Dark text for user name */
+   margin-right: 0.5rem;
+ }
+
+ /* New Message Form */
+ .newMessage {
+   display: flex;
+   padding: 0.5rem;
+   border-top: 1px solid #ddd;
+   /* Divider above form */
+   background-color: #f7f7f7;
+   /* Light gray background */
+ }
+
+ .inputMssg {
+   flex: 1;
+   /* Input takes up most of the width */
+   padding: 0.5rem;
+   border: 1px solid #ccc;
+   /* Subtle border */
+   border-radius: 4px;
+   font-size: 1rem;
+ }
+
+ .inputMssg:focus {
+   outline: none;
+   border-color: #082d5c;
+   /* Green border on focus */
+   box-shadow: 0 0 4px rgba(76, 175, 80, 0.5);
+   /* Glow effect */
+ }
+
+ .sendBtn {
+   margin-left: 0.5rem;
+   padding: 0.5rem 1rem;
+   background-color: #082d5c;
+   /* Green button */
+   color: #fff;
+   /* White text */
+   border: none;
+   border-radius: 4px;
+   font-size: 1rem;
+   cursor: pointer;
+   transition: background-color 0.2s ease;
+ }
+
+ .sendBtn:hover {
+   background-color: #082d5c;
+   /* Darker green on hover */
+ }
+
+ .sendBtn:active {
+   background-color: #7ea7dd;
+   /* Even darker green when clicked */
+ }
+
+ /* Scrollbar for Messages */
+ .messages::-webkit-scrollbar {
+   width: 8px;
+   /* Width of scrollbar */
+ }
+
+ .messages::-webkit-scrollbar-thumb {
+   background: #ccc;
+   /* Color of scrollbar thumb */
+   border-radius: 4px;
+   /* Rounded corners for scrollbar */
+ }
+
+ .messages::-webkit-scrollbar-thumb:hover {
+   background: #aaa;
+   /* Darker thumb on hover */
+ }
+
+
+ /* App Component CSS */
+
+ /* General Styles */
+ body {
+   margin: 0;
+   font-family: 'Arial', sans-serif;
+   /* background-color: #f4f4f9; */
+   /* Light background */
+   color: #333;
+   /* Dark text */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   background-color: white;
+   /* Full viewport height */
+ }
+
+ /* Logo Section */
+ .logo {
+   text-align: center;
+   margin-bottom: 2rem;
+   
+ }
+
+ .logo:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  
+ }
+
+ .logo img {
+   width: 200px;
+   /* Adjust logo size */
+   height: auto;
+   object-fit: contain;
+ }
+
+ /* Main Authentication Section */
+ .main {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 2rem;
+   border: 1px solid #ddd;
+   /* Subtle border */
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   /* Light shadow */
+   background-color: #ffffff;
+   /* White background */
+ }
+
+ /* Room Selection Section */
+ .room {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: 2rem 0;
+   padding: 2rem;
+   border: 1px solid #ddd;
+   /* Subtle border */
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   /* Light shadow */
+   background-color: #ffffff;
+   /* White background */
+ }
+
+ .room label {
+   font-size: 1rem;
+   font-weight: bold;
+   margin-bottom: 0.5rem;
+ }
+
+ .room input {
+   width: 80%;
+   max-width: 300px;
+   padding: 0.5rem;
+   margin-bottom: 1rem;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 1rem;
+ }
+
+ .room button {
+   padding: 0.5rem 1rem;
+   background-color: #082d5c;
+   /* Green button */
+   color: #fff;
+   /* White text */
+   border: none;
+   border-radius: 4px;
+   font-size: 1rem;
+   cursor: pointer;
+   transition: background-color 0.2s ease;
+ }
+
+ .room button:hover {
+   background-color: #082d5c;
+   /* Darker green on hover */
+ }
+
+ .room button:active {
+   background-color: #5887c5;
+   /* Even darker green when clicked */
+ }
+
+ /* Sign-Out Button Section */
+ .signOut {
+   position: fixed;
+   top: 1rem;
+   right: 1rem;
+ }
+
+ .signOut button {
+   padding: 0.5rem 1rem;
+   background-color: #f44336;
+   /* Red button */
+   color: #fff;
+   /* White text */
+   border: none;
+   border-radius: 4px;
+   font-size: 0.9rem;
+   cursor: pointer;
+   transition: background-color 0.2s ease;
+ }
+
+ .signOut button:hover {
+   background-color: #d32f2f;
+   /* Darker red on hover */
+ }
+
+ .signOut button:active {
+   background-color: #b71c1c;
+   /* Even darker red when clicked */
+ }
+
+ /* Responsive Design */
+ @media (max-width: 768px) {
+   .room input {
+     width: 90%;
+     /* Adjust input width for smaller screens */
+   }
+
+   .logo img {
+     width: 120px;
+     /* Smaller logo for mobile devices */
+   }
+ }
+
+
+
+
+
+
+ /* Responsive Design */
+
+ /* For devices smaller than 1024px (Tablets and smaller) */
+ @media (max-width: 1024px) {
+   .chat-app {
+     width: 40rem;
+     /* Adjust width for smaller screens */
+   }
+
+   .header h1 {
+     font-size: 1.2rem;
+     /* Smaller header text */
+   }
+ }
+
+ /* For devices smaller than 768px (Mobile devices) */
+ @media (max-width: 768px) {
+   .chat-app {
+     width: 100%;
+     /* Full width for mobile */
+     height: 95vh;
+     /* Adjust height */
+   }
+
+   .header h1 {
+     font-size: 1rem;
+     /* Smaller header text */
+   }
+
+   .messages {
+     padding: 0.5rem;
+     /* Reduce padding */
+   }
+
+   .inputMssg {
+     font-size: 0.9rem;
+     /* Smaller font for input */
+   }
+
+   .sendBtn {
+     padding: 0.4rem 0.8rem;
+     /* Smaller button */
+     font-size: 0.9rem;
+   }
+ }
+
+ /* For devices smaller than 480px (Small mobile devices) */
+ @media (max-width: 480px) {
+   .chat-app {
+     width: 100%;
+     /* Full width for small mobile */
+     height: 86vh;
+     /* Adjust height */
+   }
+
+   .header h1 {
+     font-size: 0.9rem;
+     /* Smaller header text */
+   }
+
+   .signOut button {
+     font-size: 0.8rem;
+     /* Smaller sign-out button */
+     padding: 0.4rem 0.6rem;
+   }
+ }
+
+
+ 
